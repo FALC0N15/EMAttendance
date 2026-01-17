@@ -23,8 +23,10 @@
             <label for="grade">Current Grade</label>
             <input type="number" name="grade" id="grade"  value ="{{old('grade')}}" required>
         </div>
+
         <p id="successMessage" style="color:green; display:none;"></p>
         <p id="formError" style="color:red; display:none;"></p>
+
         <button type="button" id = "saveBtn">Save</button>
 
     </form>
