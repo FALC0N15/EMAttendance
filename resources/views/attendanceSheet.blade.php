@@ -2,6 +2,7 @@
 @section('title', 'Results')
 @section('content')
     <h2>Student List</h2>
+    <h3>Class Average: {{number_format($average, 2,'.','')}}</h3>
     @foreach($students as $item)
         @php
         $student = $item['student']
@@ -9,7 +10,7 @@
     <p>
         <strong> First Name:</strong>{{$student->firstName}}<br>
         <strong> Last Name:</strong>{{$student->lastName}}<br>
-        <strong> Grade:</strong>{{$student->grade}}<br>
+        <strong> Grade:</strong>{{number_format($student->grade, 2,'.','')}}<br>
         <strong> Days Missed:</strong>{{$item['days_absent']}}<br>
     </p>
 

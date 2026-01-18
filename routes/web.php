@@ -43,10 +43,11 @@ route::get('/attendance', function () {
             'student' => $student,
             'days_absent' => $daysAbsent,
             'truant' => $daysAbsent > 5,
+            'grade'=> $student->grade,
             'failing' => $student->grade < 55,
         ];
     });
-    return view('attendanceSheet', ['students' => $students
-    ]);
+    $average = $students->avg('grade');
+    return view('attendanceSheet', ['students' => $students, 'average' => $average]);
 });
 
