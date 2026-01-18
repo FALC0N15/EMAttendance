@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('_attendance_', function (Blueprint $table) {
             $table->bigIncrements('studentId');
             $table->text('firstName');
-            $table->text('LastName');
-            $table->integer('Grade');
+            $table->text('lastName');
+            $table->integer('grade');
             $table->date('last_attended_date');
             $table->timestamps();
         });

@@ -43,7 +43,7 @@ route::get('/attendance', function () {
             'student' => $student,
             'days_absent' => $daysAbsent,
             'truant' => $daysAbsent > 5,
-            'failing' => $student->Grade < 55,
+            'failing' => $student->grade < 55,
         ];
     });
     return view('attendanceSheet', ['students' => $students

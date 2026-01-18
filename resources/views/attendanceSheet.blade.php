@@ -8,8 +8,8 @@
         @endphp
     <p>
         <strong> First Name:</strong>{{$student->firstName}}<br>
-        <strong> Last Name:</strong>{{$student->LastName}}<br>
-        <strong> Grade:</strong>{{$student->Grade}}<br>
+        <strong> Last Name:</strong>{{$student->lastName}}<br>
+        <strong> Grade:</strong>{{$student->grade}}<br>
         <strong> Days Missed:</strong>{{$item['days_absent']}}<br>
     </p>
 

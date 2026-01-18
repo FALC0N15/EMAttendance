@@ -67,7 +67,7 @@
                     return false;
                 }
                 if(currentGrade >100 || currentGrade <0){
-                    err.textContent = "the current grade cannot be greater than 100% or less than 0%"
+                    err.textContent = "The current grade cannot be greater than 100% or less than 0%"
                     err.style.display = 'block';
                     btn.disabled = true;
                     nextBtn.disabled = true;
