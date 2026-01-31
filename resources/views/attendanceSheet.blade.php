@@ -13,7 +13,7 @@
                     @php
                         $student = $item['student']
                     @endphp
-                    <tr><td>{{ $student->firstName }}</td><td>{{ $student->lastName }}</td><td>{{ number_format($student->grade, 2,'.','') }}</td><td>{{ $item['days_absent'] }}</td>
+                    <tr><td><a href="{{route('select',['studentId'=>$student->studentId])}}">{{ $student->firstName }}</a></td><td>{{ $student->lastName }}</td><td>{{ number_format($student->grade, 2,'.','') }}</td><td>{{ $item['days_absent'] }}</td>
                         <td style = "font-weight: bold; color: {{($item['failing'] || $item['truant']) ? 'red' : 'green'}}"> @if($item['truant'])
                                 Student has missed more than 5 days consecutively.
                             @elseif($item['failing'])
@@ -26,9 +26,9 @@
             </table>
         </div>
 
-    <a href="{{url('/')}}">
+    <a href="{{url('/createStudent')}}">
         <button type="button">
-            Back
+            Create Student
         </button>
     </a>
 @endsection
